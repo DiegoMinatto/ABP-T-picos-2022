@@ -1,0 +1,41 @@
+html{
+    background-color: #ffffff;
+}
+div.App {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ffffff;
+    text-align: center;
+    margin: 1%;
+    margin-right: 10%;
+    margin-left: 10%;
+    border-radius: 15px;
+}
+
+h1 {
+    color: #3d2cbe;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+input {
+    border: solid 2px #4540a4;
+    
+    
+}
+
+button {
+    margin: 10px;
+}
+
+ul.none {
+	list-style-type: none;
+	}
+
+
+    div.lista {
+        margin: 1%;
+        border: solid #3d2cbe;
+        border-radius: 10px;
+        color: #57575a;
+
+    }

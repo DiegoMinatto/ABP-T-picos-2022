@@ -2,7 +2,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import './App.css';
 import Login from './Paginas/Login'
-import Teste from './Paginas/Teste'
+import CadChave from './Paginas/Teste'
 
 
 
@@ -13,9 +13,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route
-          path={'/teste'}
-          element={false ? <Teste /> : <Navigate to="/" />} 
+        <Route path={'/CadChave'} element={true ? <CadChave /> : <Navigate to="/" />} 
         />
       </Routes>
     </div>
