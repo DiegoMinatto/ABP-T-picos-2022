@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="320.043" height="214.954" viewBox="0 0 320.043 214.954">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_221" data-name="Retângulo 221" width="320.043" height="214.954" rx="14.138" transform="translate(2958.095 1577.05)" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#deecec"/>
+      <stop offset="1" stop-color="#d8d1dd"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-10" x1="0.001" y1="0.499" x2="1.001" y2="0.499" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-11" x1="0.001" y1="0.5" x2="1.002" y2="0.5" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Grupo_150" data-name="Grupo 150" transform="translate(-2958.095 -1577.05)" clip-path="url(#clip-path)">
+    <g id="Grupo_149" data-name="Grupo 149">
+      <path id="Caminho_76" data-name="Caminho 76" d="M3230.319,1630.787a4.3,4.3,0,0,1-4.95-3.539l-1.839-11.076a4.3,4.3,0,0,1,8.489-1.41l1.84,11.076A4.3,4.3,0,0,1,3230.319,1630.787Z" fill="url(#linear-gradient)"/>
+      <path id="Caminho_77" data-name="Caminho 77" d="M3270.066,1640.015a4.306,4.306,0,0,1-4.2-6.751l6.532-9.134a4.3,4.3,0,0,1,7,5.007l-6.531,9.134A4.317,4.317,0,0,1,3270.066,1640.015Z" fill="url(#linear-gradient)"/>
+      <path id="Caminho_78" data-name="Caminho 78" d="M3302.724,1672.805l-11.076,1.84a4.3,4.3,0,0,1-1.41-8.49l11.076-1.839a4.3,4.3,0,1,1,1.41,8.489Z" fill="url(#linear-gradient)"/>
+      <path id="Caminho_79" data-name="Caminho 79" d="M3291.554,1720.923a4.266,4.266,0,0,1-3.206-.747l-9.134-6.531a4.3,4.3,0,0,1,5.008-7l9.133,6.531a4.305,4.305,0,0,1-1.8,7.749Z" fill="url(#linear-gradient)"/>
+      <path id="Caminho_80" data-name="Caminho 80" d="M3201.513,1735.88a4.306,4.306,0,0,1-4.2-6.752l6.532-9.133a4.3,4.3,0,1,1,7,5.007l-6.532,9.134A4.3,4.3,0,0,1,3201.513,1735.88Z" fill="url(#linear-gradient)"/>
+      <path id="Caminho_81" data-name="Caminho 81" d="M3186.462,1692.117l-11.076,1.84a4.3,4.3,0,0,1-1.41-8.49l11.076-1.839a4.3,4.3,0,1,1,1.41,8.489Z" fill="url(#linear-gradient)"/>
+      <path id="Caminho_82" data-name="Caminho 82" d="M3195.69,1652.37a4.272,4.272,0,0,1-3.207-.747l-9.133-6.532a4.3,4.3,0,1,1,5.007-7l9.134,6.532a4.306,4.306,0,0,1-1.8,7.749Z" fill="url(#linear-gradient)"/>
+      <path id="Caminho_83" data-name="Caminho 83" d="M3263.789,1727.251l1.175,7.074a10.087,10.087,0,0,1-8.259,11.549l-14.148,2.351c-4.754.789-10.506-1.977-11.822-9.9l-.9-5.433Z" fill="url(#linear-gradient)"/>
+      <path id="Caminho_84" data-name="Caminho 84" d="M3258.194,1644.2a40.163,40.163,0,1,0-38.415,70.527,17.324,17.324,0,0,1,8.247,9.738l.01.057a.966.966,0,0,1,.386-.123l33.957-5.64a.522.522,0,0,1,.292.009l-.009-.056a19.136,19.136,0,0,1,5.364-12.522,40.182,40.182,0,0,0-9.832-61.99Zm1.849,34.238a4.336,4.336,0,0,1-4.95-3.54,15.767,15.767,0,0,0-18.148-12.978,4.3,4.3,0,1,1-1.41-8.489,24.435,24.435,0,0,1,28.048,20.057A4.335,4.335,0,0,1,3260.043,1678.441Z" fill="url(#linear-gradient)"/>
+      <path id="Caminho_85" data-name="Caminho 85" d="M3228.026,1724.468l.4-.066a.966.966,0,0,0-.386.123Z" fill="url(#linear-gradient-10)"/>
+      <path id="Caminho_86" data-name="Caminho 86" d="M3262.662,1718.715l.009.056a.522.522,0,0,0-.292-.009Z" fill="url(#linear-gradient-11)"/>
+    </g>
+  </g>
+</svg>

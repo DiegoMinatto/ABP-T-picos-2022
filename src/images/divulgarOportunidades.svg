@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="320.043" height="214.954" viewBox="0 0 320.043 214.954">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_24" data-name="Retângulo 24" width="320.043" height="214.954" rx="14.138" transform="translate(-1061.205 -1632.662)" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Caminho_21" data-name="Caminho 21" d="M-775.43-1496.689l-16.039-9.445a20.259,20.259,0,0,0,3.538-7.455l11.622,6.844,17.211,10.139a20.337,20.337,0,0,0-4.265,7.022Zm-21.327-38.787,16.686-14.245,10.651-9.093a20.351,20.351,0,0,0,5.43,6.181l-15.2,12.979-11.638,9.938a20.4,20.4,0,0,0-5.93-5.76m43.119-53.557A20.273,20.273,0,0,0-772-1567.058a20.244,20.244,0,0,0,1.227,5.338l-11.185,9.554-17.72,15.13a20.02,20.02,0,0,0-9.647-1.545,20.272,20.272,0,0,0-18.362,21.975,20.272,20.272,0,0,0,21.9,18.45,20.057,20.057,0,0,0,12.252-5.614l16.672,9.82,12.673,7.462a20.258,20.258,0,0,0-.281,5.471,20.275,20.275,0,0,0,21.9,18.452,20.019,20.019,0,0,0,8.395-2.671,20.044,20.044,0,0,0,.485-4.4V-1500a20.044,20.044,0,0,0-12.418-2.987,20,20,0,0,0-10.615,4.2l-18.15-10.689-12.55-7.392a20.461,20.461,0,0,0,0-3.256,20.236,20.236,0,0,0-1.862-6.841l11.986-10.237,16.026-13.684a20,20,0,0,0,11.174,2.285,20.2,20.2,0,0,0,16.409-11.347v-17.718a20.27,20.27,0,0,0-18.178-11.438q-.877,0-1.769.077" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-49.586" y1="25.104" x2="-49.577" y2="25.104" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#deecec"/>
+      <stop offset="1" stop-color="#d8d1dd"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_230" data-name="Grupo 230" transform="translate(1061.205 1632.662)">
+    <g id="Grupo_43" data-name="Grupo 43" clip-path="url(#clip-path)">
+      <g id="Grupo_42" data-name="Grupo 42">
+        <g id="Grupo_41" data-name="Grupo 41" clip-path="url(#clip-path-2)">
+          <rect id="Retângulo_23" data-name="Retângulo 23" width="105.727" height="135.309" transform="matrix(0.996, -0.087, 0.087, 0.996, -839.738, -1588.141)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

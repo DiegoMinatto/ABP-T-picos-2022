@@ -1,0 +1,239 @@
+.body{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('../../images/bgHome.svg');
+    background-size:cover;
+  
+  }
+  
+  .modalSalvo{
+      background-color: seagreen;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 30px;
+          width: 60%;
+          height: 60%;
+          min-width: 324px;
+          background-color:#5a3676;;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          max-width: 100%;
+          max-height: 100%;
+          overflow: hidden;
+          z-index: 20000;
+      
+  }
+  
+  .nav{
+      display:flex;
+   
+      width: 100%;
+      height: 120px;
+      margin-top: 20px;
+  }
+  
+  .menu{
+      display: flex;
+      align-items: center;
+      width: 100px;
+      height: 120px;
+  }
+  
+  .white{
+      color: white;
+  }
+  
+  
+  .green{
+      color: #1B9696;
+  }
+  
+  
+  
+  .menuIconWrp{
+      background-color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 360px;
+      margin: 0 auto;
+      display:inline-block;
+      text-align: center;
+      vertical-align: bottom;
+      line-height: 40px;
+  
+  }
+  .menuIconWrp:hover{
+      cursor: pointer;
+  }
+  
+  .imgLogo{
+      margin-left: 10px;
+      margin-right: 10px;
+    height: 50%;
+    width: auto;
+  }
+  
+  .logoWrap{
+    display: flex;
+    font-size: 20px;
+    align-items:center;
+  }
+  
+  .controleUsuario{
+      display: flex;
+      align-items: center;
+    
+      margin-left:auto; margin-right:0;
+      width: 200px;
+      height: 100%;
+      padding-right: 50px;
+      text-align: right;
+  }
+  
+  .logout{
+      font-size: 12px;
+  }
+  
+  .ceo{
+      margin-left: 5px;
+      font-size: 12px;
+  
+  }
+  
+  .logout:hover{
+      cursor: pointer;
+      text-decoration: underline;
+  }
+  .info{
+    font-size: 20px;
+  }
+  
+  .content{
+  
+      position: relative;
+      margin-top: 30px;
+      width: 100%;
+      max-height: calc(100% - 170px);
+      height: calc(100% - 160px);
+      padding-top: 40px;
+      overflow-y: auto;
+      padding-left: 100px;
+      padding-right: 100px;
+  }
+  
+  .side{
+      position: absolute;
+      height: 100%;
+      width: 300px;
+      z-index: 1000;
+  }
+  
+  .options{
+      position: relative;
+  
+      margin-top: 50px;
+      width: 100%;
+      min-height: calc(100% - 240px);
+      
+  }
+  
+  .btnOptions{
+  
+      position: relative;
+      font-weight: bold;
+      color: white;
+      width: 200px;
+      margin: 0 auto;
+      height: 40px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  
+      line-height: 40px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      border-left: 2px solid rgba(0, 0, 0, 0);
+  
+  
+      
+  }
+  .btnOptions:hover{
+      cursor: pointer;
+      border-left: 2px solid white;
+  }
+  
+  .iconSide{
+      margin-right: 10px;
+  }
+  
+  .wrpSide{
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+  }
+  
+  .hide{
+      visibility: hidden;
+  }
+  
+  @media (max-width: 767px) {                  
+      .controleUsuario {
+         display: none;
+      }
+      .content{
+          padding-left: 0px;
+          padding-right: 0px;
+      }
+   }
+
+   .row{
+       padding: 10px;
+   }
+
+   .child{
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 25px;
+    background-color: white;
+    width: 200px;
+    height:100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 4px 4px 21px -5px rgba(74,74,74,1);
+    -moz-box-shadow: 4px 4px 21px -5px rgba(74,74,74,1);
+    box-shadow: 4px 4px 21px -5px rgba(74,74,74,1);
+
+ 
+  }
+
+  .child:hover{
+    -webkit-box-shadow: 4px 4px 21px -5px rgba(0,0,0,1);
+    -moz-box-shadow: 4px 4px 21px -5px rgba(0,0,0,1);
+    box-shadow: 4px 4px 21px -5px rgba(0,0,0,1);
+
+
+  }
+
+  .prestacaoContas{
+    background-image: url('../../images/prestacaoContas.svg');
+    background-size: contain;    
+    background-repeat: no-repeat;  
+}

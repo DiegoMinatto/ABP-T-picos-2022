@@ -1,0 +1,74 @@
+.ContainerModal {
+  width: 100%;
+  height: 100%;
+  background: rgba(128, 128, 128, 0.6);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  position: fixed;
+  overflow-y: scroll;
+
+
+
+  scrollbar-width: none;
+  scrollbar-color: transparent;
+
+}
+
+.ContainerModal:-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+
+
+.ModalContent {
+  width: 626px;
+  padding: 24px 30px;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 11;
+
+
+}
+
+.Title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+}
+
+.Title img{
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+
+.IconClose:hover{
+  cursor: pointer;
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .ContainerModal {
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+
+  }
+
+  .ModalContent {
+
+    padding: 14px 20px;
+    width: 100vw;
+    border-radius: 0px;
+  }
+}

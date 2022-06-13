@@ -1,0 +1,46 @@
+.WrpTable {
+    width: 100%;
+    background-color: white;
+}
+
+.BotoesTable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: table-cell;
+}
+
+.WrpTitulo {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.ContainerTitulo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.ContainerBtnTitulo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+}
+
+.MarginGroup{
+    margin-bottom: 20px;
+}
+
+.WrpButton{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}

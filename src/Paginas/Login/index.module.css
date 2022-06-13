@@ -1,0 +1,91 @@
+.body{
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+    background-image: url('../../images/bgLogin.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+}
+
+.imgLogo{
+    width: 100px;
+    height: auto;
+}
+.login {
+    
+    color: white;
+    width: 308px;
+    height: 530px;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+.spanMsg{
+    margin:auto;
+    display:table;
+    margin-bottom: -10px;
+    color: red;
+    
+}
+
+
+.infoWrap{
+  min-height: 13.5px;
+}
+.logoWrap{
+    font-size: 20px;
+    display: flex;
+    align-items:center;
+    margin-bottom: 20px;
+}
+.btnLogin{
+    margin:0 auto;
+    display:flex;  
+    align-items: center;
+    justify-content: center;
+  font-size: 18px;
+  color: #FFFFFF;
+  height: 40px;
+  border: 0;
+  border-radius: 5px;
+  min-width: 100px;
+  width: auto;
+  padding: 15px;
+  background: transparent linear-gradient(90deg,#5B3576 0%,#1B9696 100%) 0% 0% no-repeat padding-box;
+  border-radius: 14px;
+  opacity: 1;
+}
+.marginTitulo{
+    margin-left: 5px;
+}
+
+.bottom{
+   display: flex;
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+
+  
+}
+
+.imgBottom{
+    width: 140px;
+    height: auto;
+}
