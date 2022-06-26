@@ -5,9 +5,12 @@ import styles from "./index.module.css"
 import Pagina from '../../Components/Pagina'
 import Modal from '../../Components/Modal'
 import api from '../../services/api'
+import { useNavigate } from "react-router-dom";
 
 
 function Usuarios() {
+
+    const navigate = useNavigate();
 
     const [modalCadOpen, setModalCadOpen] = useState(false);
     const [modalDelOpen, setModalDelOpen] = useState(false);
@@ -24,14 +27,18 @@ function Usuarios() {
 
 
     const salvar = () => {
-        if(senha !== Repetirsenha){
+        if (senha !== Repetirsenha) {
             return alert('As senhas não são iguais!');
         }
         if (idxSelecao === -1) {
 
-           
 
-            api.post('/usuarios/cadastra', { usuario, nome, password: senha }).then((res) => {
+
+            api.post('/usuarios/cadastra', { usuario, nome, password: senha }, {
+                headers: {
+                    Authorization: 'Bearer ' + localStorage.getItem('@CDTEC/Token')
+                }
+            }).then((res) => {
                 var tempUsers = usuarios;
                 tempUsers.push({ id: res.data.user.id, nome: res.data.user.nome, usuario: res.data.user.usuario, ativo: res.data.user.ativo })
                 setUsuario([...tempUsers])
@@ -39,14 +46,20 @@ function Usuarios() {
                 alert(res.data.msg)
             }).catch((err) => {
                 if (err.response.status === 401) {
-                    //logout
+                    localStorage.removeItem('@CDTEC/Token')
+                    localStorage.removeItem('@CDTEC/User')
+                    navigate('/');
                 } else {
                     alert(err.response.data.err)
                 }
             })
         } else {
 
-            api.put(`/usuarios/edita/${usuarios[idxSelecao].id}`, { usuario, nome, password: senha, ativo: ativo }).then((res) => {
+            api.put(`/usuarios/edita/${usuarios[idxSelecao].id}`, { usuario, nome, password: senha, ativo: ativo }, {
+                headers: {
+                    Authorization: 'Bearer ' + localStorage.getItem('@CDTEC/Token')
+                }
+            }).then((res) => {
                 var tempUsers = usuarios;
                 tempUsers[idxSelecao] = { id: tempUsers[idxSelecao].id, nome: res.data.user.nome, usuario: res.data.user.usuario, ativo: res.data.user.ativo };
                 setUsuario([...tempUsers])
@@ -54,7 +67,9 @@ function Usuarios() {
                 alert(res.data.msg)
             }).catch((err) => {
                 if (err.response.status === 401) {
-                    //logout
+                    localStorage.removeItem('@CDTEC/Token')
+                    localStorage.removeItem('@CDTEC/User')
+                    navigate('/');
                 } else {
                     alert(err.response.data.err)
                 }
@@ -72,7 +87,11 @@ function Usuarios() {
     }
 
     const deleta = () => {
-        api.delete(`/usuarios/deleta/${usuarios[idxSelecao].id}`).then((res) => {
+        api.delete(`/usuarios/deleta/${usuarios[idxSelecao].id}`, {
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('@CDTEC/Token')
+            }
+        }).then((res) => {
 
             var tempUsuarios = usuarios;
             tempUsuarios.splice(idxSelecao, 1);
@@ -82,7 +101,9 @@ function Usuarios() {
 
         }).catch((err) => {
             if (err.response.status === 401) {
-                //logout
+                localStorage.removeItem('@CDTEC/Token')
+                localStorage.removeItem('@CDTEC/User')
+                navigate('/');
             } else {
                 alert(err.response.data.err)
             }
@@ -113,14 +134,20 @@ function Usuarios() {
     }
 
     useEffect(() => {
-        api.get('/usuarios/recupera').then((res) => {
+        api.get('/usuarios/recupera', {
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('@CDTEC/Token')
+            }
+        }).then((res) => {
 
             console.log(res.data)
             setUsuarios(res.data)
 
         }).catch((err) => {
             if (err.response.status === 401) {
-                //logout
+                localStorage.removeItem('@CDTEC/Token')
+                localStorage.removeItem('@CDTEC/User')
+                navigate('/');
             } else {
                 alert(err.response.data.err)
             }
@@ -141,7 +168,7 @@ function Usuarios() {
 
                         <hr />
                         <div className={styles.WrpButton}>
-                            <button type="button" onClick={() => {deleta()}} className="btn btn-success me-1">Confirmar</button>
+                            <button type="button" onClick={() => { deleta() }} className="btn btn-success me-1">Confirmar</button>
                         </div>
 
                     </>
@@ -184,7 +211,7 @@ function Usuarios() {
                         }
 
                         <div className={styles.WrpButton}>
-                            <button type="button" onClick={() => {salvar()}} className="btn btn-success me-1">Salvar</button>
+                            <button type="button" onClick={() => { salvar() }} className="btn btn-success me-1">Salvar</button>
                         </div>
 
                     </>
@@ -195,7 +222,7 @@ function Usuarios() {
 
                 null
             }
-            <Pagina>
+            <Pagina navigate={navigate}>
 
                 <div className={styles.WrpTitulo}>
                     <div className={styles.ContainerTitulo}></div>

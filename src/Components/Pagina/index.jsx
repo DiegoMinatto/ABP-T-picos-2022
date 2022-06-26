@@ -2,18 +2,25 @@ import React, { useState } from 'react';
 import styles from "./index.module.css"
 
 import Logo from '../../images/logo.png'
-import Satc from '../../images/satc.svg'
-import Hub from '../../images/hub.svg'
 
+import { useNavigate  } from "react-router-dom";
 
-import { AiFillHome, AiOutlineShareAlt, AiOutlineFileText, AiOutlineMenu } from 'react-icons/ai';
-import { BsGear } from 'react-icons/bs';
-import { GoMail } from 'react-icons/go';
+import { AiFillHome, AiFillStar } from 'react-icons/ai';
+import { BsKeyFill } from 'react-icons/bs';
+import { BiUser } from 'react-icons/bi';
 import { FaHamburger } from 'react-icons/fa';
 
 function Pagina({children, ...rest}) {
 
+    const navigate = useNavigate ();
+
     const [nav, setNav] = useState(false);
+
+    const logout = () => {
+        localStorage.removeItem('@CDTEC/Token')
+        localStorage.removeItem('@CDTEC/User')
+        navigate('/login');
+    }
 
     return (
 
@@ -37,10 +44,10 @@ function Pagina({children, ...rest}) {
                     <div className={styles.options}>
 
                         <>
-                            <div className={styles.btnOptions}><AiFillHome className={styles.iconSide} size={20} /><span>Home</span></div>
-                            <div className={styles.btnOptions}><BsGear className={styles.iconSide} size={20} /><span>Gestão Geral</span></div>
-                            <div className={styles.btnOptions}><GoMail className={styles.iconSide} size={20} /><span>Chamados</span></div>
-                            <div className={styles.btnOptions}><AiOutlineShareAlt className={styles.iconSide} size={20} /><span>Oportunidades</span></div>
+                            <div className={styles.btnOptions} onClick={() => {rest.navigate('/home')}}><AiFillHome className={styles.iconSide} size={20} /><span>Home</span></div>
+                            <div className={styles.btnOptions} onClick={() => {rest.navigate('/chaves')}}><BsKeyFill className={styles.iconSide} size={20} /><span>Chaves</span></div>
+                            <div className={styles.btnOptions} onClick={() => {rest.navigate('/usuarios')}}><BiUser className={styles.iconSide} size={20} /><span>Usuarios</span></div>
+                            <div className={styles.btnOptions} onClick={() => {rest.navigate('/reservas')}}><AiFillStar className={styles.iconSide} size={20} /><span>Reservas</span></div>
                         </>
 
 
@@ -62,7 +69,7 @@ function Pagina({children, ...rest}) {
                 <div className={styles.controleUsuario}>
                     <div>
                         <span className={styles.info}>Space Control</span><br></br>
-                        <span className={styles.logout}>{'<'} LOGOUT</span> <span className={styles.ceo}>Leandro G.</span>  <br></br>
+                        <span onClick={() => {logout()}} className={styles.logout}>{'<'} LOGOUT</span> <span className={styles.ceo}>{localStorage.getItem('@CDTEC/User')}</span>  <br></br>
                     </div>
                 </div>
             </div>

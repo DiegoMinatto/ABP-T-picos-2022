@@ -6,8 +6,13 @@ import Modal from '../../Components/Modal'
 
 import api from '../../services/api'
 
+import { useNavigate } from "react-router-dom";
+
 
 function Chaves() {
+
+    const navigate = useNavigate();
+
 
     const [modalCadOpen, setModalCadOpen] = useState(false);
     const [modalDelOpen, setModalDelOpen] = useState(false);
@@ -20,16 +25,22 @@ function Chaves() {
     const [chaves, setChaves] = useState([]);
 
     useEffect(() => {
-        api.get('/chave/recupera').then((res) => {
+        api.get('/chave/recupera', {
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('@CDTEC/Token')
+            }
+        }).then((res) => {
 
             setChaves(res.data)
 
         }).catch((err) => {
-          if (err.response.status === 401) {
-            //logout
-          } else {
-            alert(err.response.data.err)
-          }
+            if (err.response.status === 401) {
+                localStorage.removeItem('@CDTEC/Token')
+                localStorage.removeItem('@CDTEC/User')
+                navigate('/');
+            } else {
+                alert(err.response.data.err)
+            }
         })
     }, [])
 
@@ -43,7 +54,11 @@ function Chaves() {
     }
 
     const deleta = () => {
-        api.delete(`/chave/deleta/${chaves[idxSelecao].id}`, { sala, observacao }).then((res) => {
+        api.delete(`/chave/deleta/${chaves[idxSelecao].id}`, { sala, observacao }, {
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('@CDTEC/Token')
+            }
+        }).then((res) => {
 
             var tempChaves = chaves;
             tempChaves.splice(idxSelecao, 1);
@@ -53,9 +68,11 @@ function Chaves() {
 
         }).catch((err) => {
             if (err.response.status === 401) {
-              //logout
+                localStorage.removeItem('@CDTEC/Token')
+                localStorage.removeItem('@CDTEC/User')
+                navigate('/');
             } else {
-              alert(err.response.data.err)
+                alert(err.response.data.err)
             }
         })
     }
@@ -64,7 +81,11 @@ function Chaves() {
 
         if (idxSelecao === -1) {
 
-            api.post('/chave/cadastra', { sala, observacao }).then((res) => {
+            api.post('/chave/cadastra', { sala, observacao }, {
+                headers: {
+                    Authorization: 'Bearer ' + localStorage.getItem('@CDTEC/Token')
+                }
+            }).then((res) => {
                 var tempChaves = chaves;
                 tempChaves.push({ id: res.data.chave.id, sala: res.data.chave.sala, observacao: res.data.chave.observacao })
                 setChaves([...tempChaves])
@@ -72,13 +93,19 @@ function Chaves() {
                 alert(res.data.msg)
             }).catch((err) => {
                 if (err.response.status === 401) {
-                  //logout
+                    localStorage.removeItem('@CDTEC/Token')
+                    localStorage.removeItem('@CDTEC/User')
+                    navigate('/');
                 } else {
-                  alert(err.response.data.err)
+                    alert(err.response.data.err)
                 }
             })
         } else {
-            api.put(`/chave/edita/${chaves[idxSelecao].id}`, { sala, observacao }).then((res) => {
+            api.put(`/chave/edita/${chaves[idxSelecao].id}`, { sala, observacao }, {
+                headers: {
+                    Authorization: 'Bearer ' + localStorage.getItem('@CDTEC/Token')
+                }
+            }).then((res) => {
                 var tempChaves = chaves;
                 tempChaves[idxSelecao] = { id: tempChaves[idxSelecao].id, sala: res.data.chave.sala, observacao: res.data.chave.observacao };
                 setChaves([...tempChaves])
@@ -86,9 +113,11 @@ function Chaves() {
                 alert(res.data.msg)
             }).catch((err) => {
                 if (err.response.status === 401) {
-                  //logout
+                    localStorage.removeItem('@CDTEC/Token')
+                    localStorage.removeItem('@CDTEC/User')
+                    navigate('/');
                 } else {
-                  alert(err.response.data.err)
+                    alert(err.response.data.err)
                 }
             })
         }
@@ -128,7 +157,7 @@ function Chaves() {
 
                         <hr />
                         <div className={styles.WrpButton}>
-                            <button type="button" onClick={() => {deleta()}} className="btn btn-success me-1">Confirmar</button>
+                            <button type="button" onClick={() => { deleta() }} className="btn btn-success me-1">Confirmar</button>
                         </div>
 
                     </>
@@ -162,7 +191,7 @@ function Chaves() {
 
                 null
             }
-            <Pagina>
+            <Pagina navigate={navigate}>
 
                 <div className={styles.WrpTitulo}>
                     <div className={styles.ContainerTitulo}></div>
